@@ -1,0 +1,123 @@
+.addEditExam_body{
+  width: 100%;
+  background-color: rgb(244, 244, 244); 
+}
+.darkaddEditExam_body{
+  width: 100%;
+  background-color: #121721;
+}
+.exams_header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+    color: #253858;
+    .exam_txt{
+    }
+    .add_button{
+        display: flex;
+        align-items: center;
+        border: 2px solid #253858;
+        background-color: transparent;
+        color: #253858;
+        padding: 5px 10px;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover{
+            background-color: #5aa2f5;
+            border: 2px solid transparent;
+            color: white;
+
+        }
+    }
+}
+
+.table_section{
+    padding: 20px 20px;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    padding-bottom: 50px;
+    Table{
+        width: 100%;
+
+    }
+}
+.action{
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    span{
+        margin-top: 15px;
+        width: 40px;
+        height: 25px;   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        &:hover{
+            &:nth-child(1){
+                border: 1px solid goldenrod;
+            }
+            &:nth-child(2){
+                border: 1px solid red;
+            }
+        }
+        &:nth-child(1){
+            color: goldenrod;
+        }
+        &:nth-child(2){
+            color: red;
+        }
+    }
+}
+.action_name{
+    margin-top: 20px;
+    font-size: 14px;
+    color: black;
+    width: 100px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .exams_header{
+        width: 690px !important;
+    }
+    .table_section{
+        width: 690px !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .exams_header{
+        width: 350px !important;
+        flex-direction: column;
+        button{
+            width: 200px;
+        }
+    }
+    .table_section{
+        width: 350px !important;
+    }
+  
+}
+@media screen and (max-width: 350px) {
+    .exams_header{
+        width: 300px !important;
+        flex-direction: column;
+        button{
+            width: 200px;
+        }
+    }
+    .table_section{
+        width: 300px !important;
+    }
+  
+}

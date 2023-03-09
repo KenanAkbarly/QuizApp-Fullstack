@@ -1,0 +1,37 @@
+.result_body{
+    width: 100%;
+    padding-top: 30px;
+    .result_container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+.table_body{
+    padding-bottom: 30px;
+    width: 100%;
+    table{
+        color: red;
+    }
+}
+.pageTitle{
+    color: #253858;
+    padding: 20px 0 20px 0;
+    // text-align: center;
+}
+@media screen and (max-width: 1200px){
+  .result_container{
+    width: 690px !important;
+  }
+    }
+    @media screen and (max-width: 750px){
+        .result_container{
+            width: 350px !important;
+          }
+    }
+  
+    @media screen and (max-width: 350px){
+        .result_container{
+            width: 300px !important;
+          }
+    }
+  

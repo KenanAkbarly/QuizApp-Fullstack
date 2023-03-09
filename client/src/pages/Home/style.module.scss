@@ -1,0 +1,281 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://www.socrative.com/wp-content/uploads/2021/12/shutterstock_630405986_Flipped-1.jpg");
+  background-size: cover;
+  position: relative;
+  background-position: 50% 50%;
+  .header_text {
+    width: 89%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    h1 {
+      font-weight: 700;
+      // line-height: 10px;
+      letter-spacing: 2px;
+      font-size: 40px;
+      color: rgb(255, 255, 255);
+    }
+    p {
+      color: white;
+      width: 420px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-weight: 500;
+      font-size: 20px;
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 5px 8px;
+    }
+    button {
+      width: 240px;
+      height: 50px;
+      clip-path: polygon(0% 0%, 75% 0%, 82% 48%, 75% 100%, 0% 100%);
+      border-radius: 5px;
+      padding: 7px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      transition: all 0.5s ease;
+      font-weight: 500;
+      color: white;
+      font-size: 18px;
+      background-color: #06b7d8;
+      border: none;
+      &:hover {
+        width: 260px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.learning_section {
+  width: 100%;
+  background-color: #f2fbfd;
+  .contanier {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 50px 0px;
+    .learning_section_left {
+      width: 50%;
+      h2 {
+        font-size: 40px;
+        color: #2babe1;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+        margin-top: 50px;
+      }
+      p {
+        color: rgb(59, 58, 58);
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    .learning_section_right {
+      width: 50%;
+    }
+  }
+}
+.activity_section {
+    width: 100%;
+    background-color: #f2fbfd;
+    .contanier {
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+    //   padding: 20px 0px;
+      .activity_section_left {
+        width: 50%;
+        h2 {
+          font-size: 40px;
+          color: #2babe1;
+          letter-spacing: 2px;
+          margin-bottom: 40px;
+          margin-top: 100px;
+        }
+        p {
+          color: rgb(59, 58, 58);
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+      .activity_section_right {
+        width: 50%;
+      }
+    }
+  }
+.carusel_body {
+  width: 100%;
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .learning_section {
+    .contanier {
+      width: 690px !important;
+      .learning_section_left {
+        width: 290px !important;
+        h2 {
+          font-size: 20px;
+          color: #2babe1;
+          letter-spacing: 2px;
+          margin-bottom: 40px;
+          margin-top: 50px;
+        }
+        p {
+          color: rgb(59, 58, 58);
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+      .learning_section_right {
+        width: 490px !important;
+      }
+    }
+  }
+  .activity_section {
+    .contanier {
+      width: 690px !important;
+      .activity_section_left {
+        width: 290px !important;
+        h2 {
+          font-size: 20px;
+          color: #2babe1;
+          letter-spacing: 2px;
+          margin-bottom: 40px;
+          margin-top: 50px;
+        }
+        p {
+          color: rgb(59, 58, 58);
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+      .activity_section_right {
+        width: 490px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .learning_section {
+    .contanier {
+      width: 350px !important;
+      flex-direction: column;
+      .learning_section_left {
+        margin: 0 auto;
+        order: 2;
+        width: 320px !important;
+        h2 {
+          font-size: 15px;
+          color: #2babe1;
+          letter-spacing: 2px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          color: rgb(59, 58, 58);
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+      .learning_section_right {
+        margin: 0 auto;
+        order: 1;
+        width: 320px !important;
+      }
+    }
+  }
+  .activity_section {
+    .contanier {
+      width: 350px !important;
+      flex-direction: column;
+      .activity_section_left {
+        margin: 0 auto;
+        order: 2;
+        width: 320px !important;
+        h2 {
+          font-size: 15px;
+          color: #2babe1;
+          letter-spacing: 2px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          color: rgb(59, 58, 58);
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+      .activity_section_right {
+        margin: 0 auto;
+        order: 1;
+        width: 320px !important;
+      }
+    }
+  }
+  .header_text {
+    p {
+      width: 330px !important;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .learning_section {
+    .contanier {
+      width: 300px !important;
+      .learning_section_left {
+        margin: 0 auto;
+        width: 300px !important;
+       
+      }
+      .learning_section_right {
+        margin: 0 auto;
+        width: 300px !important;
+      }
+    }
+  }
+  .activity_section {
+    .contanier {
+      width: 300px !important;
+      flex-direction: column;
+      .activity_section_left {
+        margin: 0 auto;
+        width: 300px !important;
+      }
+      .activity_section_right {
+        margin: 0 auto;
+        width: 300px !important;
+      }
+    }
+  }
+  .header_text {
+    p {
+      width: 280px !important;
+      margin: 0 auto;
+      font-size: 18px !important;
+    }
+    h1 {
+      font-size: 25px !important;
+    }
+  }
+}

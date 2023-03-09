@@ -1,0 +1,340 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    align-items: end;
+    background-color: rgb(244, 244, 244); 
+    justify-content: center;
+    background-image: url('https://dev-jobs-site.netlify.app/static/media/bg-pattern-header.f3307602ee5e7c6b4f50.svg');
+        background-repeat: no-repeat;
+    background-size: cover;
+    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    padding-bottom: 50px;
+    .container{
+      position: absolute;
+      bottom: -30px;
+      background-color: white;
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        border-radius: 10px;
+        justify-content: space-between;
+        .navbar_left{
+            display: flex;
+            width:250px ;
+            height: 70px;
+            align-items: center;
+            color: #253858;
+             font-size: 18px;
+             padding: 0px 15px;
+             gap: 5px;
+             cursor: pointer;
+            img {
+                width: 50px;
+                height: 50px;
+                // mix-blend-mode:;
+                background-color: transparent;
+
+            }
+            h1{
+              font-size: 30px;
+            }
+        }
+        .navbar_right{
+            display: flex;
+            gap: 30px;
+            // width: 550px;
+            height: 70px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 10px;
+            
+            .Dark_active_route{
+                 border: 2px solid #264e93;
+                border-radius: 7px;
+  
+            }
+            .items{
+             
+                height: 30px;
+                gap: 5px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                font-weight: 600;
+                // color: #253858;
+                border-radius: 5px;
+                padding: 10px 15px;
+               transition: all 0.3s ease;
+                &:hover{
+                    // border: 2px solid #253858;
+                    // border-bottom:2px solid transparent;
+                    // border-top:2px solid transparent;
+                    background-color: #5aa2f5;
+                    color: white;
+
+                }
+                .active_modal{
+                  width: 150px;
+                  height: 200px;
+                  // background-color:white;
+                  // position: absolute;
+                  top: 100px;
+                  right: 80px;
+                  display: flex;
+                  flex-direction: column;
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  padding: 10px 10px;
+                  transition: 850ms;
+                  color: red;
+                }
+                .none_modal{
+                  width: 0;
+                  height: 0;
+                  // background-color: red;
+                  justify-content: center;
+                  display: none;
+                }
+            }
+            .modal_items{
+                height: 30px;
+                gap: 5px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                font-weight: 600;
+                color: #253858;
+                border-radius: 5px;
+                padding: 10px 15px;
+
+              //  transition: all 0.3s ease;
+              
+               .user_name{
+                margin-left: 15px;
+                margin-bottom: 6px;
+                display: flex;
+                gap: 5px;
+                font-size: 16px;
+              }
+
+                .active_modal{    
+                  height: 80px;
+                  // background-color:white;
+                  position: absolute;
+                  top: 60px;
+                  right: -10px;
+                  display: flex;
+                  flex-direction: column;
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  padding-top: 10px;
+                  padding: 10px 20px;
+                }
+                .none_modal{
+                  width: 0;
+                  height: 0;
+                  background-color: red;
+                  justify-content: center;
+                  display: none;
+                }
+            }
+        }
+    }
+}
+
+.ham_menu{
+     align-items: end;
+    justify-content: center;
+    background-image: url('https://dev-jobs-site.netlify.app/static/media/bg-pattern-header.f3307602ee5e7c6b4f50.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    display: flex;
+    position: relative;
+    padding-bottom: 50px;
+    display: none;
+  .hamburger_menu {
+      position: absolute;
+      bottom: -30px;
+      height: 70px;
+      background-color: rgb(250, 250, 250);
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      width: 690px;
+      align-items: center;
+      display: none ;
+      padding: 0px 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+    .ham_menu_navbar_left{
+        display: flex;
+        gap: 5px;
+        width:250px ;
+        height: 70px;
+        align-items: center;
+        color: #253858;
+         font-size: 18px;
+         
+        //  position: absolute;
+         cursor: pointer;
+        img {
+          // mix-blend-mode:color-burn;
+            width: 50px;
+            height: 50px;
+
+        }
+    }
+
+  .menu_bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+    // z-index: 1000000;
+
+  }
+  
+  .nav_menu {
+    background-color: #060b26;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: 850ms;
+    // position: absolute;
+    z-index: 99999;
+}
+.active {
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 99999;
+    right: 0;
+    top: 0;
+    transition: 350ms;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+  
+  
+  .nav_text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+  }
+  
+  .nav_items {
+    text-decoration: none;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    &:hover{
+        background-color: #1a83ff;
+        color: white;
+    }
+  }
+  .nav_items_user{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    &:hover{
+        background-color: #1a83ff;
+        color: white;
+    }
+  }
+  
+  .nav-text a:hover {
+    background-color: #1a83ff;
+  }
+  
+  .nav_menu_items {
+    width: 100%;
+  }
+  
+  .navbar_toggle {
+    // background-color: rgb(245, 245, 245);
+    // background-color: white;
+    border-bottom: 1px solid #253858;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    i{
+        color: red;
+    }
+  }
+  .span{
+    margin-left: 16px;
+  }
+}
+.switch_contanier{
+  width: 1200px;
+  margin: 0 auto;
+  .switch_body{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+   }
+}
+
+  @media screen and (max-width: 1200px){
+ .navbar{
+    display: none !important;;
+ }
+ .hamburger_menu{
+    display: flex !important;
+ }
+ .ham_menu{
+  display: flex !important;
+  h1{
+    font-size: 25px;
+  }
+  .switch_contanier{
+    width: 690px ;
+  }
+  .menu_bars{
+    font-size: 25px;
+  }
+ }
+ }
+ @media screen and (max-width: 750px){
+   .hamburger_menu{
+    width: 350px !important;
+   }
+   .switch_contanier{
+    width: 350px !important;
+  }
+ }
+ @media screen and (max-width: 350px){
+   .hamburger_menu{
+    width: 300px !important;
+   }
+   .switch_contanier{
+    width: 300px !important;
+  }
+ }

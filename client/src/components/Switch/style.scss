@@ -1,0 +1,41 @@
+.switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 5px;
+     width: 120px !important;
+    cursor: pointer;
+    &__moon,
+    &__sun {
+      width: 20px;
+      height: 20px;
+    }
+  
+    &__root {
+      width: 38px;
+      height: 14px;
+      background-color: #ffffff;
+      border-radius: 14px;
+      box-sizing: content-box;
+      padding: 5px;
+      position: relative;
+      transition: all 0.3s ease;
+  
+      &__circle {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        background-color: #5964e0;
+        // left: 5px;
+      }
+  
+      &--active {
+        .switch__root__circle {
+        //   left: 29px;
+        }
+      }
+    }
+  
+  }
+  

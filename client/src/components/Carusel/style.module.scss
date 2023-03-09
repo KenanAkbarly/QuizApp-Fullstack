@@ -1,0 +1,134 @@
+.carusel_body {
+  width: 98vw;
+  position: relative;
+  .carusel_contanier {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0px 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .image_body {
+      border: 3px solid #243a65;
+      border-radius: 5px;
+    }
+  }
+  .carusel_item {
+    position: relative;
+
+    width: 100%;
+    // height: 700px;
+    display: flex;
+    .carusel_text {
+      width: 100%;
+    }
+    .image_body {
+      width: 60%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 2px;
+    }
+  }
+}
+.carusel_text {
+  width: 40% !important;
+  h2 {
+    margin-top: 70px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    color: #2babe1;
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
+  p {
+    width: 400px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #616262;
+    padding: 0px 5px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .carusel_contanier {
+    width: 690px !important;
+  }
+  .image_body{
+    height: 350px !important;
+    img{
+        height: 345px !important;
+    }
+  }
+  .carusel_text{
+    p{
+        width: 250px !important;
+        font-size: 17px;
+    }
+    h2{
+        font-size: 30px;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .carusel_contanier {
+    width: 350px !important;
+    flex-direction: column;
+  }
+  .carusel_text{
+    justify-content: center;
+    order: 2;
+    p{
+        width: 320px !important;
+        font-size: 15px;
+        text-align: center;
+    }
+    h2{
+        width: 320px !important;
+
+        font-size: 25px;
+    margin-bottom: 10px;
+   margin-left: 0px;
+    text-align: center;
+
+    }
+  }
+  .image_body{
+    order: 1;
+    width: 100% !important;
+    margin: 0 auto !important;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 350px) {
+  .carusel_contanier {
+    width: 300px !important;
+    flex-direction: column;
+  }
+  .carusel_text{
+    justify-content: center;
+    order: 2;
+    p{
+        width: 300px !important;
+        font-size: 15px;
+        text-align: center;
+    }
+    h2{
+        width: 300px !important;
+
+        font-size: 25px;
+    margin-bottom: 10px;
+   margin-left: 0px;
+    text-align: center;
+
+    }
+  }
+  .image_body{
+    order: 1;
+    width: 100% !important;
+    margin: 0 auto !important;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,229 @@
+.edit_body{
+    width: 100%;
+}
+.addExam_body {
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    .addExam_text {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        color: #253858;
+    }
+
+    .form_body {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 10px 30px;
+        .tab_pane1{
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        form {
+            .cancelBtn{
+                margin-top: 20px;
+                width: 150px;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+                color: white;
+                font-size: 15px;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                background-color: #0067F1;
+                &:hover {
+                    background-color: #468ce9;
+                    cursor: pointer;
+                }
+            } 
+            .addBtn{
+                margin-top: 20px;
+                width: 150px;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+                background-color: #5aac44;
+                color: white;
+                font-size: 15px;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                margin-left: 20px;
+                &:hover {
+                    background-color: #72b75f;
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+        .inp_name_body {
+            padding-top: 10px;
+            height: 84px;
+            .require{
+                color: red;
+                font-size: 13px;
+                margin-top: 4px;
+            }
+            .exam_name {
+                // color: #253858;
+                font-weight: 500;
+                font-size: 18px;
+                margin-bottom: 5px;
+
+            }
+
+            .inp_body {
+                width: 560px;
+                height: 40px;
+                border: 1px solid rgb(230, 230, 230);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0px 5px;
+                gap: 8px;
+                font-size: 20px;
+
+                input {
+                    width: 100%;
+                    height: 35px;
+                    border: none;
+                    font-size: 18px;
+                    background-color: transparent;
+                    &::placeholder {
+                        font-size: 16px;
+                        font-style: italic;
+                        color: #264e93;
+
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.qustion_header{
+    display: flex;
+    justify-content: end;
+    .add_question_btn{
+        display: flex;
+        align-items: center;
+        // border: 2px solid #253858;
+        background-color: transparent;
+        // color: #253858;
+        padding: 5px 10px;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover{
+            background-color: #5aa2f5;
+            border: 2px solid transparent;
+            color: white;
+
+        }
+    }
+}
+.action{
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    span{
+        margin-top: 15px;
+        width: 40px;
+        height: 25px;   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        &:hover{
+            &:nth-child(1){
+                border: 1px solid goldenrod;
+            }
+            &:nth-child(2){
+                border: 1px solid red;
+            }
+        }
+        &:nth-child(1){
+            color: goldenrod;
+        }
+        &:nth-child(2){
+            color: red;
+        }
+    }
+}
+.action_name{
+    margin-top: 20px;
+    font-size: 14px;
+    color: black;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.table{
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .addExam_body{
+        width: 690px !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+  
+    .addExam_body{
+        width: 350px !important;
+    }
+    .inp_body{
+        width: 300px !important;
+    }
+    .addBtn{
+        margin-left: 0 !important;
+    }
+    .addExam_btns{
+        display: flex;
+        flex-direction: column;
+        button{
+            width: 120px !important;
+            height: 30px !important;
+        }
+    }
+    input{
+        font-size: 14px !important;
+    }
+}
+@media screen and (max-width: 350px) {
+  
+    .addExam_body{
+        width: 300px !important;
+    }
+    .inp_body{
+        width: 260px !important;
+        // padding: 0px 10px !important;
+    }
+    .addBtn{
+        margin-left: 0 !important;
+    }
+    .addExam_btns{
+        display: flex;
+        flex-direction: column;
+        button{
+            width: 120px !important;
+            height: 30px !important;
+        }
+    }
+    input{
+        font-size: 14px !important;
+    }
+}

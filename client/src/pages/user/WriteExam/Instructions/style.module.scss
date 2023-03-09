@@ -1,0 +1,198 @@
+.inc_body{
+  width: 100%;
+}
+.Instructions_body{
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    width: 700px;
+    margin: 0 auto;;
+    h1{
+        text-decoration: underline;
+        font-weight: 500;
+        font-size: 25px;
+        margin-left: 30px;
+        margin-top: 10px;
+        text-align: center;
+        color: #253858;
+
+    }
+    .Instructions_items{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        // width: 100%;
+        margin: 0 auto;
+        margin-top:20px;
+        
+    }
+    .btn_body{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         margin-bottom: 30px;
+        margin-left: 30px;
+        gap: 20px;
+        button{
+            border: 2px solid  #253858;
+            background-color: transparent;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #253858;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            width: 160px;
+            height: 40px;
+            &:hover{
+                background-color: #5aa2f5;
+                color: white !important;
+                border: 2px solid transparent;
+                cursor: pointer;
+            }
+        }
+    }
+}
+/*** VARIABLES ***/
+/* Colors */
+// $black: #1d1f20;
+$black: #ffffff;
+$blue: #83e4e2;
+$green: #5f0464;
+$yellow: #32fdc7;
+$white: #fafafa;
+
+
+
+/*** EXTEND ***/
+/* box-shadow */
+%boxshadow {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+}
+
+
+
+/*** STYLE ***/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+
+
+ol.gradient_list {
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+  > li {
+    background: white;
+    border-radius: 0 0.5rem 0.5rem 0.5rem;
+    @extend %boxshadow;
+    counter-increment: gradient-counter;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+    &::before,
+    &::after {
+      background: linear-gradient(135deg, $blue 0%,$green 100%);
+      border-radius: 1rem 1rem 0 1rem;
+      content: '';
+      height: 3rem;
+      left: -1rem;
+      overflow: hidden;
+      position: absolute;
+      top: -1rem;
+      width: 3rem;
+    }
+    &::before {
+      align-items: flex-end;
+      @extend %boxshadow;
+      content: counter(gradient-counter);
+      color: $black;
+      display: flex;
+      font: 900 1.5em/1 'Montserrat';
+      justify-content: flex-end;
+      padding: 0.125em 0.25em;
+      z-index: 1;
+    }
+    @for $i from 1 through 5 {
+      &:nth-child(10n+#{$i}):before {
+        background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%,rgba($yellow, $i * 0.2) 100%);
+      }
+    }
+    @for $i from 6 through 10 {
+      &:nth-child(10n+#{$i}):before {
+        background: linear-gradient(135deg, rgba($green, 1 - (($i - 5) * 0.2)) 0%,rgba($yellow, 1 - (($i - 5) * 0.2)) 100%);
+      }
+    }
+    + li {
+      margin-top: 2rem;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+    .Instructions_body{
+        width: 400px !important;
+    }
+    h1{
+        margin-left: 0 !important;
+    }
+  .Instructions_items{
+     width: 100%;
+     li{
+        width: 100%;
+     }
+  }
+  .btn_body{
+    margin-left: 0 !important;
+  }
+
+}
+@media screen and (max-width: 750px) {
+    .Instructions_body{
+        width: 310px !important;
+    }
+    h1{
+        margin-left: 0 !important;
+    }
+    .btn_body{
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 50px !important;
+    }
+  .Instructions_items{
+     width: 100%;
+     li{
+        width: 100%;
+     }
+  }
+
+  
+}
+@media screen and (max-width: 350px) {
+    .Instructions_body{
+        width: 300px !important;
+    }
+    h1{
+        margin-left: 0 !important;
+    }
+    .btn_body{
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 50px !important;
+    }
+  .Instructions_items{
+     width: 100%;
+     li{
+        width: 100%;
+     }
+  }
+
+  
+}
